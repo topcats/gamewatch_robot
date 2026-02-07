@@ -17,7 +17,7 @@ SYSTEM_CONFIG = appconf(CONFIG_FILENAME).loadConfig()
 
 # read arguments
 if len(sys.argv) > 1:
-    print("Color argument:", sys.argv[1])
+    print("Colour argument:", sys.argv[1])
     colourname = sys.argv[1].lower()
 
     # Fire if enabled
@@ -25,4 +25,4 @@ if len(sys.argv) > 1:
         if 'oZWaveCtrl' not in globals():
             oZWaveCtrl = zwavectrl(SYSTEM_CONFIG["ZWave"]["username"], SYSTEM_CONFIG["ZWave"]["password"], SYSTEM_CONFIG["ZWave"]["url"], SYSTEM_CONFIG["zwave-scenes"])
 
-        oZWaveCtrl.SetLightColor(colourname)
+        oZWaveCtrl.SetLightColour(colourname)

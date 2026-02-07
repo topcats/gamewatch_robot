@@ -67,19 +67,19 @@ class zwavectrl:
             print("Error in ZWave __turnoff: " + str(e))
 
 
-    def SetLightColor(self, colorname):
+    def SetLightColour(self, colourname):
         """
         Set Game Light State
 
-        :param colorname: Light colour name
-        :type colorname: string
+        :param colourname: Light colour name
+        :type colourname: string
 
         """
         try:
-            zID = self.scenedata[colorname]
-            print ("ZWave SetLightColor: " + colorname + " -> " + zID)
+            zID = self.scenedata[colourname]
+            print ("ZWave SetLightColour: " + colourname + " -> " + zID)
             if zID != "":
                 self.__doaction(zID)
                 threading.Timer(self.__resettime, self.__turnoff).start() 
         except Exception as e:
-            print("Error in ZWave SetLightColor: " + str(e))
+            print("Error in ZWave SetLightColour: " + str(e))
