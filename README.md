@@ -2,6 +2,12 @@
 
 > <https://github.com/topcats/gamewatch_robot>
 
+## Requirements
+
+```bash
+sudo pip install nflgame
+```
+
 ## System Config
 
 ```bash
